@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Simple Socket.io chat</title>
+  <link rel="stylesheet" type="text/css" href="assets/styles.css" />
+  <script src="/socket.io/socket.io.js"></script>
+
+  <style>
+  </style>
+</head>
+
+<body>
+  <div class="main">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="title">Chat</div>
+      <input type="text" placeholder="Your username" id="username">
+      <button id="setUsername">Start!</button>
+    </header>
+    <!-- Header -->
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- The Close Button -->
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+    </div>
+    <!-- The Modal -->
+
+    <!-- Main content -->
+    <ul class="container" id="container"></ul>
+    <!-- Main content -->
+
+    <!-- Footer -->
+    <div class="footer">
+
+      <div id="typing"></div>
+
+      <div class="controls">
+        <form class="sendText">
+          <input type="text" id="txt" class="inputText" placeholder="Your message...">
+          <button id="sendMessage" class="inputButton">Send</button>
+        </form>
+
+        <form enctype="multipart/form-data" id="uploadForm" class="sendFile">
+          <button class="uploadFile">Send an image</button>
+          <input type="file" name="avatar" id="avatar" />
+          <button id="sendImage" class="inputButton--2">Send</button>
+        </form>
+
+      </div>
+    </div>
+    <!-- Footer -->
+
+  </div>
+
+  <script src="assets/scripts.js"></script>
+
+</body>
+
+</html>
